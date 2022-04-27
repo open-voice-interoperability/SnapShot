@@ -23,3 +23,5 @@ yarn-error.log*
 
 # config
 
+# PyCharm project settings
+.idea

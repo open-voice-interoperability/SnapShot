@@ -2,9 +2,12 @@ body {
   text-align: center;
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   color: #3f4850;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.forkongithub a {
+.floating a {
   background: #000;
   color: #fff;
   text-decoration: none;
@@ -18,13 +21,13 @@ body {
   transition: 0.5s;
 }
 
-.forkongithub a:hover {
+.floating a:hover {
   background: #c11;
   color: #fff;
 }
 
-.forkongithub a::before,
-.forkongithub a::after {
+.floating a::before,
+.floating a::after {
   content: "";
   width: 100%;
   display: block;
@@ -35,7 +38,7 @@ body {
   background: #fff;
 }
 
-.forkongithub a::after {
+.floating a::after {
   bottom: 1px;
   top: auto;
 }

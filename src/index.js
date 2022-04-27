@@ -3,8 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { SpeechProvider } from "@speechly/react-client";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const appId = process.env.REACT_APP_APP_ID;
+if (appId === undefined) {
+    throw Error("Missing Speechly app ID!");
+}
+
+ReactDOM.render(
+    <React.StrictMode>
+        <SpeechProvider appId={appId}>
+            <App />
+        </SpeechProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
