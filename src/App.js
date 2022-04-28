@@ -8,6 +8,7 @@ import NotFound from "./components/NotFound";
 
 import { useSpeechContext } from "@speechly/react-client";
 import {
+  IntroPopup,
   PushToTalkButton,
   BigTranscript,
 } from "@speechly/react-ui";
@@ -66,6 +67,7 @@ export default function App() {
 
   return (
       <PhotoContextProvider>
+        <IntroPopup />
         <BigTranscript placement="top"/>
         <PushToTalkButton placement="bottom" captureKey=" " powerOn="auto" />
         <HashRouter basename="/SnapScout">
